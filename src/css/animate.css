@@ -1,0 +1,65 @@
+.lines-button {
+  display: inline-block;
+  border: none;
+  background: none;
+  outline: none;
+  float: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.lines-button {
+  transition: .3s;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.2rem;
+  border:none;
+}
+.lines-button:hover {
+  opacity: 1;
+}
+.lines {
+  display: inline-block;
+  width: 3.4rem;
+  height: 0.5rem;
+  background: #ecf0f1;
+  border-radius: 0.1rem;
+  transition: 0.3s;
+  position: relative;
+}
+.lines:before, .lines:after {
+  display: inline-block;
+  width: 3.4rem;
+  height: 0.5rem;
+  background: #ecf0f1;
+  border-radius: 0.1rem;
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  content: '';
+  -webkit-transform-origin: 0.2rem center;
+  transform-origin: 0.2rem center;
+}
+.lines:before {
+  top: 1.2rem;
+}
+.lines:after {
+  top: -1.2rem;
+}
+.lines-button.arrow.close .lines:before, .lines-button.arrow.close .lines:after {
+  top: 0;
+  width: 2.22222rem;
+}
+.lines-button.arrow.close .lines:before {
+  -webkit-transform: rotate3d(0, 0, 1, 40deg);
+  transform: rotate3d(0, 0, 1, 40deg);
+}
+.lines-button.arrow.close .lines:after {
+  -webkit-transform: rotate3d(0, 0, 1, -40deg);
+  transform: rotate3d(0, 0, 1, -40deg);
+}
+
+.lines-button.arrow-up.close {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, 90deg);
+  transform: scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, 90deg);
+}

@@ -5,7 +5,7 @@
   outline: none;
   float: none;
   position: absolute;
-  right: 0;
+  right: -5px;
   top: 0;
 }
 .lines-button {
@@ -42,6 +42,9 @@
 }
 .lines:before {
   top: 1.2rem;
+}
+#lef-tpanel-btn.close  {
+  opacity: 1;
 }
 .lines:after {
   top: -1.2rem;

@@ -1,6 +1,10 @@
 
 body {
 	font-family: "Segoe UI", 'sans-serif';
+    position: relative;
+}
+body .modal-open {
+    overflow: hidden;
 }
 h1 {
     color: black;
@@ -106,11 +110,27 @@ a,a:hover {
     position: relative;
     z-index: 2;
 }
-.info-holder.lang a.active span {
+.info-holder.lang a.active span,
+.info-holder.lang a:hover span {
     z-index: 2;
     color: #04779D;
+    transition: all .2s;
 } 
-.info-holder.lang a.active:before {
+.info-holder.lang a:before {
+    content: '';
+    height: 19px;
+    width: 29px;
+    background: transparent;
+    position: absolute;
+    top: 5px;
+    left: -4px;
+    opacity: 1;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.info-holder.lang a.active:before,
+.info-holder.lang a:hover:before {
     content: '';
     height: 19px;
     width: 29px;
@@ -157,6 +177,17 @@ a,a:hover {
     font-size: 20px;
     font-weight: 300;
     line-height: 58px;
+    position: relative;
+}
+.main-navbar li a.active:before,
+.main-navbar li a:hover:before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
 }
 .video-desc {
     margin-top: 106px;
@@ -319,6 +350,11 @@ a,a:hover {
 }
 .capabilities .cap-holder {
     text-align: center;
+    margin-top: 30px;
+}
+.capabilities .cap-holder .image-holder img {
+    width: auto;
+    height: 100%;
 }
 .capabilities .image-holder {
     width: 120px;
@@ -356,7 +392,7 @@ a,a:hover {
 }
 .how-works .video-holder {
     height: 475px;
-    max-width: 940px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 40px;
@@ -366,7 +402,7 @@ a,a:hover {
     margin: 0 auto;
 }
 .how-works p {
-    text-align: left;
+    text-align: justify;
 }
 
 /*//prices//*/
@@ -455,6 +491,21 @@ a,a:hover {
     margin-top: 70px;
     margin-bottom: 2px;
     display: table;
+    transition: all .5s;
+    padding-top: 9px;
+}
+.prices .package-item .btn-holder button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.prices .package-item .btn-holder:hover {
+    background: #fff;
+    transition: all .5s;
+}
+.prices .package-item .btn-holder:hover button {
+    color: #059ed1;
+    transition: all .2s;
 }
 .prices .package-item .btn-holder a {
     color: white;
@@ -462,6 +513,7 @@ a,a:hover {
     font-size: 20px;
     font-weight: 400;
     position: static;
+    transition: all .5s;
     /* left: 50%; */
     /* top: 50%; */
     /* -webkit-transform: translateX(-50%) translateY(-50%); */
@@ -504,6 +556,44 @@ a,a:hover {
     margin-top: 0px;
     margin-bottom: 97px;
 }
+#myModal .modal-content {
+    border-radius: 0;
+}
+#myModal .btn-holder {
+    text-align: center;
+}
+#myModal button.agreebtn {
+    background: #04779d;
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 10px;
+    width: 135px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+#myModal button.agreebtn:hover {
+    color: #04779d;
+    background: #fff;
+    border: 1px solid #04779d;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+#myModal .modal {
+    z-index: 32101;
+}
+#myModal input {
+    height: 40px;
+    margin-right: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #000;
+}
+.reviews h2 {
+    margin-bottom: 100px;
+}
 .bxslider li {
     text-align: center;
 }
@@ -545,6 +635,12 @@ a,a:hover {
     text-align: center;
     display: table;
     margin: 0 auto;
+    transition: all .5s;
+    border: 1px solid #04779d;
+}
+.reviews .btn-holder:hover {
+    transition: all .2s;
+    background: #fff; 
 }
 .reviews .btn-holder a {
     color: white;
@@ -553,7 +649,14 @@ a,a:hover {
     font-weight: 400;
     display: table-cell;
     vertical-align: middle;
+    transition: all .5s;
+    text-decoration: none;
 }
+.reviews .btn-holder:hover a {
+    color: #04779d;
+    transition: all .2s;
+}
+
 
 /*//contacts//*/
 .contacts {
@@ -609,6 +712,7 @@ a,a:hover {
     font-family: "Segoe UI";
     font-size: 18px;
     font-weight: 300;
+    outline: none;
 }
 
 
@@ -618,6 +722,7 @@ a,a:hover {
     font-family: "Segoe UI";
     font-size: 18px;
     font-weight: 300;
+    outline: none;
 }
 .contacts .form-holder input::-moz-placeholder,
 .contacts .form-holder textarea::-moz-placeholder {
@@ -660,6 +765,12 @@ a,a:hover {
     font-family: "Segoe UI";
     font-size: 24px;
     font-weight: 300;
+    transition: all .5s;
+}
+.contacts .btn-holder:hover button {
+    background: #fff;
+    transition: all .2s;
+    color: #04779d;
 }
 .contacts .copyright {
     text-align: center;
@@ -692,10 +803,16 @@ a,a:hover {
     text-align: center;
     font-size: 20px;
     padding-top: 5px;
+    transition: all .5s;
+}
+.social-nets ul li a:hover {
+    transition: all .2s;
+    color: #04779d;
+    background: #fff;
 }
 #left-panel-fx {
     position: fixed;
-    left: -239px;
+    left: -245px;
     top: 0;
     background: #059ed1;
     z-index: 10000;
@@ -758,10 +875,282 @@ a,a:hover {
     background: #000;
     opacity: .4;
     position: fixed;
-    z-index: 5;
+    z-index: 20;
     width: 100%;
     height: 100%;
     -webkit-transition: all .2s;
     -o-transition: all .2s;
     transition: all .2s;
+}
+.show-btn {
+    height: 25px;
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.show-btn .raill {
+    position: relative;
+    top: -44px;
+    transition: all .5s;
+}
+.show-btn .raill i {
+    margin-left: 10px;
+}
+.show-btn.active .raill {
+    top: -8px;
+    transition: all .5s;
+}
+/*.show-btn .span2 {
+    height: 0px;
+    overflow: hidden;
+}*/
+.package-desc.open {
+    max-height: 300px;
+    transition: all .5s;
+}
+
+#modal {
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: -2000px;
+    right: 0;
+    bottom: 0;
+    z-index: 17100;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#modal.active {
+    position: fixed;
+    top: -0;
+}
+#modal .modal-content {
+    pointer-events: initial;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 50%;
+    top: -1500px;
+    width: 940px;
+    transform: translateX(-50%) translateY(50%);
+    -webkit-transition: all .8s;
+    -o-transition: all .8s;
+    transition: all .8s;
+}
+.modal-rail.roleon {
+    top: -715px;
+    -webkit-transition: all .8s;
+    -o-transition: all .8s;
+    transition: all .8s;
+}
+#modal.active .modal-content {
+    top: 0px;
+    -webkit-transition: all .8s;
+    -o-transition: all .8s;
+    transition: all .8s;
+}
+#modal .modal-body {
+    height: 670px;
+    background: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+#modal table {
+    width: 100%;
+}
+.ofer h1 {
+    font-weight: 100;
+    font-size: 30px;
+    margin-top: 0;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.ofer .info-terms {
+    height: 367px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #f7f5f5;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 10px;
+}
+.ofer .inputs-holdre {
+    margin-bottom: 30px;
+}
+.ofer .inputs-holdre input {
+    height: 40px;
+    margin-right: 30px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #000;
+}
+.ofer .info-terms::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #e2e2e2;
+}
+
+.ofer .info-terms::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+.ofer .info-terms::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #04779d;
+}
+
+
+.ofer #btn-role {
+    text-align: center;
+    margin-top: 20px;
+
+}
+.ofer #btn-role  button {
+    background: #04779d;
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 10px;
+    width: 135px;
+    transition: all .5s;
+}
+.ofer #btn-role  button:hover {
+    color: #04779d;
+    background: #fff;
+    border: 1px solid #04779d;
+    transition: all .5s;
+}
+.ofer #btn-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.ofer #fn-close {
+    text-align: center;
+    margin-top: 30px;
+}
+.ofer #fn-close button {
+    background: #04779d;
+    color: #fff;
+    border: transparent;
+    padding: 10px;
+    width: 135px;
+    border: 1px solid transparent;
+    transition: all .5s;
+}
+.ofer #fn-close button:hover {
+    color: #04779d;
+    background: #fff;
+    border: 1px solid #04779d;
+    transition: all .5s;
+}
+.ofer .check-holder {
+    margin-top: 40px;
+}
+.ofer .check-holder input {
+    vertical-align: middle;
+    outline: none;
+}
+.ofer .check-holder span {
+    vertical-align: middle;
+}
+.ofer .modal-window {
+    margin-bottom: 200px;
+}
+.modal-rail {
+    position: relative;
+    top: 0;
+    -webkit-transition: all .8s;
+    -o-transition: all .8s;
+    transition: all .8s;
+}
+
+
+.ofer .inputs-holdre input,
+.ofer .inputs-holdre textarea {
+    color: #B9B9B9;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.ofer .inputs-holdre input::-webkit-input-placeholder,
+.ofer .inputs-holdre textarea::-webkit-input-placeholder {
+    color: #B9B9B9;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    font-weight: 300;
+}
+.ofer .inputs-holdre input::-moz-placeholder,
+.ofer .inputs-holdre textarea::-moz-placeholder {
+    color: #B9B9B9;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    font-weight: 300;
+}/* Firefox 19+ */
+.ofer .inputs-holdre input:-moz-placeholder,
+.ofer .inputs-holdre textarea:-moz-placeholder {
+    color: #B9B9B9;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    font-weight: 300;
+}/* Firefox 18- */
+.ofer .inputs-holdre input:-ms-input-placeholder,
+.ofer .inputs-holdre textarea:-ms-input-placeholder {
+    color: #B9B9B9;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    font-weight: 300;
+}
+.cont-holder table td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 10px;
+}
+.cont-holder table tr:nth-child(even) {
+    background: #f7f5f5;
+}
+.bx-wrapper .bx-controls-direction a {
+    z-index: 9;
+}
+
+#get-form label {
+    display: none !important;
+}
+.get-wersion .input-holder input.error {
+    border-color: red;
+}
+#rew-form label {
+    display: none !important;
+}
+#rew-form input.error {
+    border-color: red;
+}
+#contact-form {
+
+}
+#contact-form label {
+    display: none !important;
+}
+#contact-form input.error {
+    border-color: red;
+}
+#offer-form label {
+    display: none !important;
+}
+#offer-form input.error {
+    border-color: red;
+}
+#offer-form input.error ~ span {
+    color: red;
 }

@@ -98,28 +98,28 @@
 	        	<div class="blackplate"></div>
 	            <div class="container">
 	            	<div class="row">
-	            		<div class="col-md-3">
+	            		<div class="col-md-3 col-sm-3">
 	            			<div class="logo-holder">
-	            				LOGO
+	            				<img src="img/icons/logo.png">
 	            			</div>
 	            		</div>
-	            		<div class="col-md-9">
+	            		<div class="col-md-9 col-sm-9">
 	            			<nav>
-	            				<ul class="main-navbar">
+	            				<ul id="main-nav" class="main-navbar">
 	            					<li>
-	            						<a href="#">О продукте</a>
+	            						<a href="#aboutp">О продукте</a>
 	            					</li>
 	            					<li>
-	            						<a href="#">Как это работает</a>
+	            						<a href="#howit">Как это работает</a>
 	            					</li>
 	            					<li>
-	            						<a href="#">Цена</a>
+	            						<a href="#pricep">Цена</a>
 	            					</li>
 	            					<li>
-	            						<a href="#">Отзывы</a>
+	            						<a href="#revp">Отзывы</a>
 	            					</li>
 	            					<li>
-	            						<a href="#">Контакты</a>
+	            						<a href="#contp">Контакты</a>
 	            					</li>
 	            				</ul>
 	            			</nav>
@@ -152,7 +152,7 @@
 	</div>
 
 	<section class="get-wersion">
-		<form>
+		<form id="get-form">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -160,24 +160,24 @@
 							Получить пробную версию
 						</h1>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-3">
 						<div class="input-holder">
-							<input placeholder="Имя:"></input>
+							<input name="name" placeholder="Имя:"></input>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-3">
 						<div class="input-holder">
-							<input placeholder="Имя:"></input>
+							<input name="phone" placeholder="Телефон:"></input>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-3">
 						<div class="input-holder">
-							<input placeholder="Имя:"></input>
+							<input name="email" placeholder="Почта:"></input>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-3">
 						<div class="btn-holder">
-							<button>
+							<button type="submit" value="Validate!">
 								Отправить
 							</button>
 						</div>
@@ -187,7 +187,7 @@
 		</form>
 	</section>
 
-	<section class="about-product">
+	<section id="aboutp" class="about-product">
 		<div class="container">
 			<div class="row desc-holder">
 				<div class="col-md-12">
@@ -200,21 +200,21 @@
 				</div>
 			</div>
 			<div class="row prev">
-				<div class="col-md-2">
+				<div class="col-md-2 col-sm-2 col-xs-2">
 					<div class="prev-holder">
 						<div class="image-holder">
 							<img src="img/prev-1.jpg">
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-4 col-xs-4">
 					<div class="prev-holder">
 						<div class="image-holder">
 							<img src="img/prev-2.jpg">
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 col-sm-6 col-xs-6">
 					<div class="prev-holder">
 						<div class="image-holder">
 							<img src="img/prev-3.jpg">
@@ -240,7 +240,7 @@
 	<section class="capabilities">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div>
 					<h1>
 						Основные возможности
 					</h1>
@@ -279,7 +279,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="cap-holder">
-						<div class="image-holder img3">
+						<div class="image-holder">
 							<img src="img/icons/icon-rate.png">
 						</div>
 						<div class="desc-holder">
@@ -296,7 +296,7 @@
 		</div>
 	</section>
 
-	<section class="how-works">
+	<section id="howit" class="how-works">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -312,8 +312,8 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="text-holder">
-					<div class="row">
+				<div class="col-md-12">
+					<div class='row'>
 						<div class="col-md-6">
 								<p>
 									Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезызвестный универсальный код речей. 
@@ -330,9 +330,10 @@
 		</div>
 	</section>
 
-	<section class="prices">
+	<section id="pricep" class="prices">
 		<div class="container">
 			<div class="row">
+			<div class="col-md-12">
 				<h1>
 					Стоимость пакетов 
 				</h1>
@@ -340,8 +341,9 @@
 					При создании генератора мы использовали небезызвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце.
 				</p>
 			</div>
+			</div>
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-12">
 					<div class="package-item">
 						<div class="top-part">
 							<div class="name">
@@ -349,6 +351,16 @@
 							</div>
 							<div class="price">
 								$80000
+							</div>
+						</div>
+						<div class="show-btn">
+							<div class="raill">
+								<div class="span2">Cкрыть
+									<i class="fa fa-angle-double-up"></i>
+								</div>
+								<div class="span1">Смотреть
+									<i class="fa fa-angle-double-down"></i>
+								</div>
 							</div>
 						</div>
 						<div class="package-desc">
@@ -461,13 +473,13 @@
 							</ul>
 						</div>
 						<div class="btn-holder">
-							<a href="#">
-								заказать
-							</a>
+							<button>
+								Заказать
+							</button>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-12">
 					<div class="package-item">
 						<div class="top-part">
 							<div class="name">
@@ -475,6 +487,16 @@
 							</div>
 							<div class="price">
 								$80000
+							</div>
+						</div>
+						<div class="show-btn">
+							<div class="raill">
+								<div class="span2">Cкрыть
+									<i class="fa fa-angle-double-up"></i>
+								</div>
+								<div class="span1">Смотреть
+									<i class="fa fa-angle-double-down"></i>
+								</div>
 							</div>
 						</div>
 						<div class="package-desc">
@@ -587,13 +609,13 @@
 							</ul>
 						</div>
 						<div class="btn-holder">
-							<a href="#">
-								заказать
-							</a>
+							<button>
+								Заказать
+							</button>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-12">
 					<div class="package-item">
 						<div class="top-part">
 							<div class="name">
@@ -601,6 +623,16 @@
 							</div>
 							<div class="price">
 								$80000
+							</div>
+						</div>
+						<div class="show-btn">
+							<div class="raill">
+								<div class="span2">Cкрыть
+									<i class="fa fa-angle-double-up"></i>
+								</div>
+								<div class="span1">Смотреть
+									<i class="fa fa-angle-double-down"></i>
+								</div>
 							</div>
 						</div>
 						<div class="package-desc">
@@ -713,9 +745,9 @@
 							</ul>
 						</div>
 						<div class="btn-holder">
-							<a href="#">
-								заказать
-							</a>
+							<button>
+								Заказать
+							</button>
 						</div>
 					</div>
 				</div>
@@ -723,7 +755,7 @@
 		</div>
 	</section>
 
-	<section class="reviews">
+	<section id="revp" class="reviews">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -733,13 +765,11 @@
 				</div>
 			</div>
 			<div class="row">
+				<h2>
+					Здесь пока нет ни одного отзыва
+				</h2>
 				<ul class="bxslider">
 				  <li>
-		  			<div class="image-ring">
-				  		<div class="image-holder">
-				  			<img src="img/content/urer-rev.jpg">
-				  		</div>
-		  			</div>
 		  			<div class="name-holder">
 			  			<h3>
 			  				Светлана Зарва
@@ -755,11 +785,6 @@
 		  			</div>
 				  </li>
 				  <li>
-		  			<div class="image-ring">
-				  		<div class="image-holder">
-				  			<img src="img/content/urer-rev.jpg">
-				  		</div>
-		  			</div>
 		  			<div class="name-holder">
 			  			<h3>
 			  				Светлана Зарва
@@ -778,7 +803,7 @@
 			</div>
 			<div class="row">
 				<div class="btn-holder">
-					<a href="#">
+					<a href="#" data-toggle="modal" data-target="#myModal">
 						Оставить отзыв
 					</a>
 				</div>
@@ -786,7 +811,7 @@
 		</div>
 	</section>
 
-	<section class="contacts">
+	<section id="contp" class="contacts">
 		<div class="blackplate"></div>
 			<div class="container">
 				<div class="cn-wraper">
@@ -844,13 +869,13 @@
 									<h3>Задать вопрос</h3>
 								</div>
 								<div class="form-holder">
-									<form action="">
+									<form action="" id='contact-form'>
 										<div class="row">
 											<div class="form-group col-sm-6">
-												<input type="text" placeholder="Имя:">
+												<input name='name' type="text" placeholder="Имя:">
 											</div>
 											<div class="form-group col-sm-6">
-												<input type="text" placeholder="Почта:">
+												<input name="email" type="text" placeholder="Почта:">
 											</div>
 											<div class="form-group col-sm-12">
 												<textarea placeholder="Cообщение:"></textarea>
@@ -876,12 +901,124 @@
 	</section>
 
 
+	<div id="modal" class="ofer">
+		<div class="modal-content">
+			<div class="modal-body">
+					<div id="btn-close">
+						<i class="fa fa-times"></i>
+					</div>
+				<div class="modal-rail">
+					<form id="offer-form" action="">
+						<div class="modal-window">
+							<h1>
+								Ваши данные
+							</h1>
+							<div class="inputs-holdre">
+								<input name="name" type="text" placeholder="Имя:"> 
+								<input name="phone" type="text" placeholder="Телефон:"> 
+								<input name="email" type="text" placeholder="Почта:"> 
+							</div>
+							<div class="info-terms">
+								Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение направлений прогрессивного развития. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. С другой стороны дальнейшее развитие различных форм деятельности требуют определения и уточнения дальнейших направлений развития. Разнообразный и богатый опыт реализация намеченных плановых заданий играет важную роль в формировании дальнейших направлений развития.
+								С другой стороны постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание существенных финансовых и административных условий. Таким образом дальнейшее развитие различных форм деятельности требуют от нас анализа новых предложений. С другой стороны рамки и место обучения кадров позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. 
+
+								Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение направлений прогрессивного развития. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. С другой стороны дальнейшее развитие различных форм деятельности требуют определения и уточнения дальнейших направлений развития. Разнообразный и богатый опыт реализация намеченных плановых заданий играет важную роль в формировании дальнейших направлений развития.
+								С другой стороны постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание существенных финансовых и административных условий. Таким образом дальнейшее развитие различных форм деятельности требуют от нас анализа новых предложений. С другой стороны рамки и место обучения кадров позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. 
+
+								Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение направлений прогрессивного развития. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. С другой стороны дальнейшее развитие различных форм деятельности требуют определения и уточнения дальнейших направлений развития. Разнообразный и богатый опыт реализация намеченных плановых заданий играет важную роль в формировании дальнейших направлений развития.
+								С другой стороны постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание существенных финансовых и административных условий. Таким образом дальнейшее развитие различных форм деятельности требуют от нас анализа новых предложений. С другой стороны рамки и место обучения кадров позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. 
+							</div>
+							<div class="check-holder">
+								<input name="agree" type="checkbox">
+								<span> Я согласен с условиями договора</span>
+							</div>
+							<div id="btn-role">
+								<button value="Validate!" type="submit">
+									Далее
+								</button>
+							</div>
+						</div>
+						<div class="modal-window">
+							<h1>
+								Данные для оплаты
+							</h1>
+							<div class="cont-holder">
+								<table>
+									<tr>
+										<td>Заниздра Сергей Анатолиевич</td>
+										<td>30 лет</td>
+									</tr>
+									<tr>
+										<td>Номер банковского счета:</td>
+										<td>2648641888448</td>
+									</tr>
+									<tr>
+										<td>телефон</td>
+										<td>09541545</td>
+									</tr>
+									<tr>
+										<td>Skype</td>
+										<td>Intertech@intertech.com</td>
+									</tr>
+									<tr>
+										<td>Skype</td>
+										<td>Intertech@intertech.com</td>
+									</tr>
+									<tr>
+										<td>Skype</td>
+										<td>Intertech@intertech.com</td>
+									</tr>
+									<tr>
+										<td>Skype</td>
+										<td>Intertech@intertech.com</td>
+									</tr>
+								</table>
+							</div>
+							<div id="fn-close">
+								<button>
+									Закрыть
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <form id="rew-form" action="">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">Оставить отзыв</h4>
+			      </div>
+			      <div class="modal-body">
+			      		<input name="name" type="text" placeholder="Имя">
+			      		<input name="phone" type="text" placeholder="Телефон">
+			      		<input name="email" type="text" placeholder="Почта">
+			      </div>
+		      <div class="modal-footer">
+		      	<div class="btn-holder">
+		        	<button value="Validate!" type="submit" class="agreebtn" >Отправить</button>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+      </form>
+	</div>
+
+
 
 
 	<script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="vendor/bxslider-4/dist/jquery.bxslider.js"></script>
 	<script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/jquery.mb.YTPlayer.min.js"></script>
+	<script type="text/javascript" src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
 	<script src="js/apikey.js"></script>
 	<script src="js/YT-init.js"></script>
 	<script src="js/main.js"></script>
@@ -890,6 +1027,127 @@
 		  $('.bxslider').bxSlider();
 		  	controls: false
 		});
+	</script>
+	<script type="text/javascript">
+		$('.show-btn').on('click', function() {
+			$(this).next('.package-desc').toggleClass('open');
+			$(this).toggleClass('active');
+		})
+
+	</script>
+	<script>
+		$('.package-item .btn-holder button').on('click', function () {
+			$('#modal').addClass('active');
+			$('#backplate').addClass('active');
+			$('body').addClass('modal-open');
+		})
+		$('#backplate').on('click', function () {
+			$('#modal').removeClass('active');
+			$('#backplate').removeClass('active');
+			$('body').removeClass('modal-open');
+			$('#modal').find('.modal-rail').removeClass('roleon');
+		})
+
+		$('#btn-close').on('click', function () {
+			$('#modal').removeClass('active');
+			$('#backplate').removeClass('active');
+			$('body').removeClass('modal-open');
+			$('#modal').find('.modal-rail').removeClass('roleon');
+		})
+		$('#fn-close').on('click', function () {
+			$('#modal').removeClass('active');
+			$('#backplate').removeClass('active');
+			$('body').removeClass('modal-open');
+			$('#modal').find('.modal-rail').removeClass('roleon');
+		});
+
+		$(document).ready(function(){
+		    $("#main-nav").on("click","a", function (event) {
+		        event.preventDefault();
+		        var id  = $(this).attr('href'),
+		            top = $(id).offset().top;
+		        $('body,html').animate({scrollTop: top}, 1500);
+		    });
+		})
+
+	</script>
+	<script>
+	$('#get-form').each(function () {
+        $(this).validate({
+              rules: {
+                phone: {
+                  required: true,
+                  number: true
+                },
+                email: {
+                  required: true,
+                  email: true
+                },
+                name: {
+                  required: true,
+                  minlength: 1
+                }
+              }
+        });
+    });
+    $('#myModal').on('shown.bs.modal', function (e) {
+    	e.preventDefault()
+  		$('#rew-form').validate({
+              rules: {
+                phone: {
+                  required: true,
+                  number: true
+                },
+                email: {
+                  required: true,
+                  email: true
+                },
+                name: {
+                  required: true,
+                  minlength: 1
+                }
+              }
+        })
+	})
+
+	$('#contact-form').validate({
+	      rules: {
+	        email: {
+	          required: true,
+	          email: true
+	        },
+	        name: {
+	          required: true,
+	          minlength: 1
+	        }
+	      }
+	})
+
+	$('#offer-form').validate({
+		rules: {
+			phone: {
+				required: true,
+				number: true
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			name: {
+				required: true,
+				minlength: 1
+			},
+			agree: {
+              required: true,
+              minlength: 1
+            }
+		},
+		submitHandler: function(form) {
+			$('#modal').find('.modal-rail').addClass('roleon');
+		}
+	})
+		// var itter = 0;
+	// $('#btn-role').on('click', )
 	</script>
 
 </body>

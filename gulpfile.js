@@ -32,7 +32,7 @@ var serverConfig = {
 	server: {
 		baseDir: "./dist"
 	},
-	tunnel: true,
+	tunnel: false,
 	host: 'localhost',
 	port: 63341,
 	logPrefix: "browser-sync"

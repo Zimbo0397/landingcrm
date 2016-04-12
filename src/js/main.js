@@ -15,3 +15,4 @@ $('#backplate').on('click', function() {
 	$('#backplate').removeClass('active');
 	$('#left-panel-fx').removeClass('active');
 })
+

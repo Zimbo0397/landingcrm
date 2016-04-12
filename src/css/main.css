@@ -591,6 +591,19 @@ a,a:hover {
     outline: none;
     border: 1px solid #000;
 }
+#rew-form textarea {
+    margin-right: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #000;
+    resize: none;
+}
+#rew-form textarea.error {
+    border-color: red;
+}
 .reviews h2 {
     margin-bottom: 100px;
 }
@@ -705,6 +718,9 @@ a,a:hover {
     background: transparent;
     border: 2px solid #fff;
     padding: 5px;
+}
+.contacts .form-holder textarea.error {
+    border-color: red;
 }
 .contacts .form-holder input,
 .contacts .form-holder textarea {
@@ -1153,4 +1169,10 @@ a,a:hover {
 }
 #offer-form input.error ~ span {
     color: red;
+}
+.confirm-container-review {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 26px;
 }

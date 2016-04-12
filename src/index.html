@@ -878,7 +878,7 @@
 												<input name="email" type="text" placeholder="Почта:">
 											</div>
 											<div class="form-group col-sm-12">
-												<textarea placeholder="Cообщение:"></textarea>
+												<textarea name="comment" placeholder="Cообщение:"></textarea>
 											</div>
 										</div>
 										<div class="btn-holder">
@@ -997,9 +997,11 @@
 			        <h4 class="modal-title" id="myModalLabel">Оставить отзыв</h4>
 			      </div>
 			      <div class="modal-body">
+
+			      		<div class="confirm-container-review">Отзыв успешно отправлен</div>
 			      		<input name="name" type="text" placeholder="Имя">
 			      		<input name="phone" type="text" placeholder="Телефон">
-			      		<input name="email" type="text" placeholder="Почта">
+			      		<textarea name="comment"></textarea>
 			      </div>
 		      <div class="modal-footer">
 		      	<div class="btn-holder">
@@ -1105,6 +1107,10 @@
                 name: {
                   required: true,
                   minlength: 1
+                },
+                comment: {
+                  required: true,
+                  minlength: 1
                 }
               }
         })
@@ -1117,6 +1123,10 @@
 	          email: true
 	        },
 	        name: {
+	          required: true,
+	          minlength: 1
+	        },
+	        comment: {
 	          required: true,
 	          minlength: 1
 	        }
